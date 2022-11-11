@@ -26,6 +26,80 @@ a {
   color: inherit;
 }
 
+.main-heading {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 800;
+  font-size: 1.7rem;
+  margin: 80px auto 40px;
+  border: 2px solid black;
+  padding: 10px 30px;
+  position: relative;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3 linear;
+}
+
+.main-heading::before,
+.main-heading::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.main-heading::before {
+  left: -30px;
+}
+
+.main-heading::after {
+  right: -30px;
+}
+
+.main-heading:hover::before {
+  animation: left-move 0.5s linear forwards;
+}
+
+.main-heading:hover::after {
+  animation: right-move 0.5s linear forwards;
+}
+
+.main-heading:hover {
+  color: white;
+  border-color: white;
+  transition-delay: 0.4s;
+}
+
+@keyframes left-move {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 75%;
+    height: 100%;
+  }
+}
+
+@keyframes right-move {
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 75%;
+    height: 100%;
+  }
+}
+
 
 /* start header */
 
