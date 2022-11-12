@@ -31,7 +31,7 @@ a {
   width: fit-content;
   font-weight: 800;
   font-size: 1.7rem;
-  margin: 80px auto 40px;
+  margin: 80px auto 80px;
   border: 2px solid black;
   padding: 10px 30px;
   position: relative;
@@ -399,3 +399,145 @@ header .mega-menu .links a i {
 
 
 /* end gallery */
+
+
+/* start features */
+
+.features {
+  padding-bottom: 70px;
+}
+
+.features .card .image {
+  overflow: hidden;
+}
+
+.features .card .image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.features .card[feature="quality"] .image::before {
+  background-color: rgba(244, 64, 54, 0.5);
+}
+
+.features .card[feature="time"] .image::before {
+  background-color: rgba(93, 255, 93, 0.5);
+}
+
+.features .card[feature="passion"] .image::before {
+  background-color: rgba(3, 169, 244, 0.5);
+}
+
+.features .card .image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  border-width: 0px 0px 170px 600px;
+  border-color: transparent transparent white transparent;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+.features .card:hover .image::after {
+  border-width: 0px 600px 170px 0px;
+  border-color: transparent transparent white transparent;
+}
+
+.features h1::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 3px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features .card[feature="quality"] h1::before {
+  background-color: rgb(244, 64, 54);
+}
+
+.features .card[feature="time"] h1::before {
+  background-color: rgb(93, 255, 93);
+}
+
+.features .card[feature="passion"] h1::before {
+  background-color: rgb(3, 169, 244);
+}
+
+.features a {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px!important;
+  border: 3px solid;
+  border-radius: 10px;
+  padding: 10px 20px;
+  overflow: hidden;
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+.features .card[feature="quality"] a {
+  color: rgb(244, 64, 54);
+  border-color: rgb(244, 64, 54);
+}
+
+.features .card[feature="time"] a {
+  color: rgb(93, 255, 93);
+  border-color: rgb(93, 255, 93);
+}
+
+.features .card[feature="passion"] a {
+  color: rgb(3, 169, 244);
+  border-color: rgb(3, 169, 244);
+}
+
+.features a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: -100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+.features .card[feature="quality"] a::before {
+  background-color: rgb(244, 64, 54);
+}
+
+.features .card[feature="time"] a::before {
+  background-color: rgb(93, 255, 93);
+}
+
+.features .card[feature="passion"] a::before {
+  background-color: rgb(3, 169, 244);
+}
+
+.features .card:hover a {
+  color: white;
+}
+
+.features .card:hover a::before {
+  left: 0%;
+}
+
+
+/* end features */
