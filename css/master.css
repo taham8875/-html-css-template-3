@@ -39,6 +39,7 @@ a {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3 linear;
+  z-index: 50;
 }
 
 .main-heading::before,
@@ -313,9 +314,88 @@ header .mega-menu .links a i {
 }
 
 
-/* .landing .go-down {
-  flex-basis: 100%;
-} */
-
-
 /* end landing */
+
+
+/* start articles */
+
+.articles {
+  margin-bottom: 80px;
+}
+
+.articles .card a {
+  color: var(--main-color);
+  border-top: 1px solid var(--section-background);
+  padding-top: 15px;
+}
+
+.articles .card {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3 ease-in-out;
+}
+
+.articles .card:hover {
+  transform: translateY(-3.5%);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+}
+
+.articles .card:hover a i {
+  animation: move-right-and-left 0.5s ease-in-out infinite;
+}
+
+.articles .card a i {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3 linear;
+}
+
+@keyframes move-right-and-left {
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+
+/* end articles */
+
+
+/* start gallery */
+
+.gallery {
+  position: relative;
+  background-color: var(--section-background);
+  padding-top: 1px;
+  padding-bottom: 40px;
+}
+
+.gallery .box .image {
+  padding: 15px;
+  margin: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 15%);
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery .box .image .img-cont {
+  overflow: hidden;
+}
+
+.gallery .box img {
+  /* margin: 15px; */
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3 linear;
+}
+
+.gallery .box .image:hover img {
+  transform: rotate(3deg) scale(107%);
+}
+
+
+/* end gallery */
