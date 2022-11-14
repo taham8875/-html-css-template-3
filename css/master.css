@@ -1144,3 +1144,274 @@ header .mega-menu .links a i {
 
 
 /* start videos */
+
+
+/* start stats */
+
+.stats {
+  background-image: url(../images/stats.jpg);
+  background-size: cover;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* z-index: -1; */
+}
+
+.stats * {
+  position: relative;
+}
+
+.stats h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 55px;
+}
+
+.stats .stat {
+  background-color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 17.5px 10px;
+}
+
+.stats .stat .number {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 5px 0 5px;
+}
+
+.stats .stat .text {
+  color: var(--main-color);
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+/* end stats */
+
+
+/* start discount */
+
+.discount .row {
+  min-height: 80vh;
+}
+
+.discount .image {
+  padding: 40px 10px;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+  animation: change-background 10s linear infinite;
+  background-size: cover;
+}
+
+.discount .image p {
+  max-width: 500px;
+}
+
+.discount .image img {
+  width: 300px;
+}
+
+.discount .image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(23 135 224 / 96%);
+  z-index: -1;
+}
+
+@keyframes change-background {
+  0%,
+  100% {
+    background-image: url("../images/discount-background1.jpg");
+  }
+  50% {
+    background-image: url("../images/discount-background2.jpg");
+  }
+}
+
+.discount form {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount form input:not([type="submit"]),
+.discount form textarea {
+  border: none;
+  background: #f3f3f3;
+  padding: 20px 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #bbb;
+  caret-color: var(--main-color);
+  width: 60%;
+  min-width: 320px;
+}
+
+.discount form textarea {
+  height: 230px;
+}
+
+.discount form input:not([type="submit"]):focus,
+.discount form textarea:focus {
+  outline: none;
+}
+
+.discount form input[type="submit"] {
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+
+@media (max-width:992px) {
+  .discount .row {
+    gap: 40px;
+  }
+  .discount form,
+  .discount .image {
+    flex-basis: 100%;
+  }
+}
+
+
+/* end discount */
+
+
+/* start footer */
+
+.footer {
+  background-color: #191919;
+  color: #b9b9b9;
+  padding: 50px 10px 70px;
+  position: relative;
+}
+
+@media (max-width:992px) {
+  .footer .info,
+  .footer .footer-gallery,
+  .footer .box,
+  .footer .links {
+    margin-bottom: 35px;
+  }
+}
+
+.footer .box h1 {
+  color: white;
+  font-size: 2.7rem;
+  margin-top: 0;
+}
+
+.footer .social-icons {
+  font-size: 1.5rem;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px 10px 0px;
+}
+
+.footer .links {
+  margin-right: 30px;
+}
+
+.footer .links li {
+  cursor: pointer;
+  padding: 15px 20px;
+  transition: 0.3s;
+}
+
+.footer .links li:hover {
+  padding-left: 30px;
+  color: white;
+}
+
+.footer .links li:not(:last-child) {
+  border-bottom: 1px solid #555;
+}
+
+.footer .links li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\F101";
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--main-color);
+}
+
+.footer .info .one-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer .info .one-info i {
+  color: var(--main-color);
+  font-size: 1.75rem;
+  margin: 10px 10px 10px 0;
+}
+
+.footer .info .one-info p {
+  margin-bottom: 0;
+}
+
+@media (max-width:992px) {
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width:767px) {
+  .footer .info .one-info {
+    flex-direction: column;
+  }
+  .footer .links {
+    margin-right: 0;
+  }
+}
+
+.footer .footer-gallery img {
+  width: 78px;
+  border: 3px solid white;
+  margin: 2px;
+}
+
+.footer .copy-right {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 20px 0;
+  border-top: 1px solid #555;
+}
+
+
+/* end footer */
