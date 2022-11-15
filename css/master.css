@@ -19,7 +19,7 @@ html {
 
 body {
   font-family: 'Cairo', sans-serif;
-  counter-reset: services-number
+  counter-reset: services-number;
 }
 
 a {
@@ -1223,8 +1223,10 @@ header .mega-menu .links a i {
 
 /* start discount */
 
-.discount .row {
+.discount {
   min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .discount .image {
@@ -1310,7 +1312,7 @@ header .mega-menu .links a i {
 }
 
 @media (max-width:992px) {
-  .discount .row {
+  .discount {
     gap: 40px;
   }
   .discount form,
@@ -1328,7 +1330,7 @@ header .mega-menu .links a i {
 .footer {
   background-color: #191919;
   color: #b9b9b9;
-  padding: 50px 10px 70px;
+  padding: 50px 10px 0;
   position: relative;
 }
 
@@ -1424,10 +1426,7 @@ header .mega-menu .links a i {
 }
 
 .footer .copy-right {
-  position: absolute;
-  bottom: 0;
   text-align: center;
-  width: 100%;
   margin: 0;
   padding: 20px 0;
   border-top: 1px solid #555;
