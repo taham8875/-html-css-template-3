@@ -22,3 +22,24 @@ scrollTopButton.addEventListener("click", function() {
     behavior: "smooth",
   });
 });
+
+// Countdown timer
+
+let target = new Date(`31 Dec ${new Date().getFullYear()} 23:59:59`);
+
+let countDown = setInterval(function() {
+  difference = target - new Date();
+
+  document.querySelector(".days span:nth-of-type(1)").innerHTML = (
+    "0" + Math.floor(difference / (1000 * 60 * 60 * 24))
+  ).slice(-2);
+  document.querySelector(".hours span:nth-of-type(1)").innerHTML = (
+    "0" + Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+  ).slice(-2);
+  document.querySelector(".minutes span:nth-of-type(1)").innerHTML = (
+    "0" + Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+  ).slice(-2);
+  document.querySelector(".seconds span:nth-of-type(1)").innerHTML = (
+    "0" + Math.floor((difference % (1000 * 60)) / 1000)
+  ).slice(-2);
+}, 1000);
