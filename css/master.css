@@ -109,6 +109,26 @@ ul {
 }
 
 
+/* start scroll to top */
+
+.scroll-to-top {
+  padding: 8px 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  z-index: 100;
+  transition: 0.3s;
+  /* display: none; */
+  opacity: 0;
+}
+
+
+/* end scroll to top */
+
+
 /* start header */
 
 header {
