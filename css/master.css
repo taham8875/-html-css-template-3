@@ -109,6 +109,22 @@ ul {
 }
 
 
+/* start page scroll progress */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 0;
+  height: 4px;
+  background-color: var(--main-color);
+}
+
+
+/* end page scroll progress */
+
+
 /* start scroll to top */
 
 .scroll-to-top {

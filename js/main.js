@@ -1,8 +1,10 @@
 let scrollTopButton = document.querySelector(".scroll-to-top");
 let articles = document.querySelector(".articles");
 
-window.onscroll = function() {
-  if (articles.getBoundingClientRect().top <= 0) {
+window.addEventListener("scroll", function() {
+  if (
+    document.documentElement.scrollTop > document.documentElement.clientHeight
+  ) {
     scrollTopButton.style.display = "block";
     // Why setTimeout() ? to add fade-in and fade-out
     setTimeout(() => {
@@ -14,7 +16,7 @@ window.onscroll = function() {
       scrollTopButton.style.display = "none";
     }, 400);
   }
-};
+});
 
 scrollTopButton.addEventListener("click", function() {
   window.scrollTo({
@@ -43,3 +45,16 @@ let countDown = setInterval(function() {
     "0" + Math.floor((difference % (1000 * 60)) / 1000)
   ).slice(-2);
 }, 1000);
+
+// page scroll progress
+
+let scrollProgress = document.querySelector(".scroll-progress");
+
+window.addEventListener("scroll", function() {
+  scrollProgress.style.width = `${
+    (document.documentElement.scrollTop /
+      (document.documentElement.scrollHeight -
+        document.documentElement.clientHeight)) *
+    100
+  }%`;
+});
